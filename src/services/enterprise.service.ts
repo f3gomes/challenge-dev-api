@@ -29,7 +29,7 @@ export const updateEnterprise = async (req: Request, res: Response) => {
     res.status(404).json({ error: "Invalid enterprise ID." });
   } else {
     try {
-      const ent = await Enterprise.findByIdAndUpdate(
+      const enterprise = await Enterprise.findByIdAndUpdate(
         req.params.id,
         { $set: req.body },
         {
@@ -37,10 +37,28 @@ export const updateEnterprise = async (req: Request, res: Response) => {
         }
       );
 
-      if (!ent) {
+      if (!enterprise) {
         res.status(404).json({ error: "Enterprise not found." });
       } else {
-        res.status(200).json(ent);
+        res.status(200).json(enterprise);
+      }
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+};
+
+export const removeEnterprise = async (req: Request, res: Response) => {
+  if (!isValidObjectId(req.params.id)) {
+    res.status(404).json({ error: "Invalid enterprise ID." });
+  } else {
+    try {
+      const enterprise = await Enterprise.findByIdAndDelete(req.params.id);
+
+      if (!enterprise) {
+        res.status(404).json({ error: "Enterprise not found." });
+      } else {
+        res.status(204).end();
       }
     } catch (error: any) {
       res.status(500).json({ error: error.message });

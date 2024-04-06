@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import {
   createEnterprise,
   findEnterprises,
+  removeEnterprise,
   updateEnterprise,
 } from "../services/enterprise.service";
 
@@ -15,4 +16,8 @@ export const getEnterprises = async (req: Request, res: Response) => {
 
 export const patchEnterprise = async (req: Request, res: Response) => {
   await updateEnterprise(req, res);
+};
+
+export const deleteEnterprise = async (req: Request, res: Response) => {
+  await removeEnterprise(req, res);
 };
