@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const enterpriseSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    required: true,
-  },
   name: {
     type: String,
     required: true,
@@ -51,6 +47,4 @@ const enterpriseSchema = new mongoose.Schema({
   },
 });
 
-const Enterprise = mongoose.model("Enterprise", enterpriseSchema);
-
-module.exports = Enterprise;
+export const Enterprise = mongoose.model("Enterprise", enterpriseSchema);

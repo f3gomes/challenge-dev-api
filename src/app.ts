@@ -1,18 +1,20 @@
 import cors from "cors";
 import express, { Application, Request, Response } from "express";
 import { main as connectDB } from "./config/database";
+import { enterpriseRoutes } from "./routes/enterprise.routes";
 
 const app: Application = express();
 const PORT = process.env.PORT || 9000;
 
+connectDB();
+
 app.use(cors());
 app.use(express.json());
-
-connectDB();
+app.use("/api/", enterpriseRoutes);
 
 app.get("/", (_req: Request, res: Response) => {
   res.json({
-    message: "API está online!",
+    message: "API is on!",
   });
 });
 
