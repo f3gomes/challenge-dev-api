@@ -4,7 +4,7 @@ import { main as connectDB } from "./config/database";
 import { enterpriseRoutes } from "./routes/enterprise.routes";
 import { routesInfo } from "./routes/routes.info";
 
-const app: Application = express();
+export const app: Application = express();
 const PORT = process.env.PORT || 9000;
 
 connectDB();
