@@ -1,4 +1,4 @@
-# Task Manager API
+# Challenge Dev API
 
 Esta é uma aplicação Node(Express) simples, desenvolvida para fins didáticos e parte do desafio técnico da empresa atriani. A aplicação permite que o usuário visualize uma lista de empreendimentos, crie novos registros e também consiga editar ou excluir.
 
