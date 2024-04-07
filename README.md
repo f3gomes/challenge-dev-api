@@ -118,6 +118,11 @@ A URL base da API está disponível no link abaixo:
 
 https://challenge-dev-api.vercel.app/
 
+## Demonstração
+
+-Validar dados de entrada nas requisições
+-Incluir testes unitários
+
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
