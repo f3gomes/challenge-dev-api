@@ -116,7 +116,7 @@ http://localhost:9000/
 
 A URL base da API está disponível no link abaixo:
 
-https://challenge-dev-service.vercel.app/
+https://challenge-dev-api.vercel.app/
 
 ## Licença
 
