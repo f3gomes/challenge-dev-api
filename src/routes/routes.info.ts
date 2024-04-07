@@ -5,6 +5,11 @@ export const routesInfo = [
     descrição: "Retorna uma lista de empreendimentos.",
   },
   {
+    rota: "/api/ent/:id",
+    método: "GET",
+    descrição: "Retorna os dados de um empreendimento específico.",
+  },
+  {
     rota: "/api/ent/new",
     método: "POST",
     descrição: "Cria um novo empreendimento.",

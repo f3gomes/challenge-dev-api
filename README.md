@@ -42,6 +42,7 @@ http://localhost:9000/
 | ROTA         | HTTP   | Descrição                       |
 | ------------ | ------ | ------------------------------- |
 | api/ent/todo | GET    | Lista todas os empreendimentos  |
+| api/ent/:id  | GET    | Detalhes de um empreendimento   |
 | api/ent/new  | POST   | Cria novo empreendimento        |
 | api/ent/:id  | PATCH  | Atualizar empreendimento por Id |
 | api/ent/:id  | DELETE | Excluir empreendimento por Id   |

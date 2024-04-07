@@ -24,6 +24,24 @@ export const findEnterprises = async (_req: Request, res: Response) => {
   }
 };
 
+export const findEnterpriseById = async (req: Request, res: Response) => {
+  if (!isValidObjectId(req.params.id)) {
+    res.status(404).json({ error: "Invalid enterprise ID." });
+  } else {
+    try {
+      const enterprise = await Enterprise.findById(req.params.id);
+
+      if (!enterprise) {
+        res.status(404).json({ error: "Enterprise not found." });
+      } else {
+        res.status(200).json(enterprise);
+      }
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+};
+
 export const updateEnterprise = async (req: Request, res: Response) => {
   if (!isValidObjectId(req.params.id)) {
     res.status(404).json({ error: "Invalid enterprise ID." });

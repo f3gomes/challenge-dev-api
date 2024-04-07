@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import {
   createEnterprise,
+  findEnterpriseById,
   findEnterprises,
   removeEnterprise,
   updateEnterprise,
@@ -12,6 +13,10 @@ export const postEnterprise = async (req: Request, res: Response) => {
 
 export const getEnterprises = async (req: Request, res: Response) => {
   await findEnterprises(req, res);
+};
+
+export const getEnterpriseById = async (req: Request, res: Response) => {
+  await findEnterpriseById(req, res);
 };
 
 export const patchEnterprise = async (req: Request, res: Response) => {
