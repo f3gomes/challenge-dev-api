@@ -63,7 +63,7 @@ http://localhost:9000/
       "street": "Rua Doutor Messuti",
       "state": "SP",
       "number": 339,
-      "cep": "60000000"
+      "postal_code": "60000000"
     }
   },
   {
@@ -79,7 +79,7 @@ http://localhost:9000/
       "street": "Rua Doutor Messuti",
       "state": "SP",
       "number": 339,
-      "cep": "60000000"
+      "postal_code": "60000000"
     }
   }
 ]
@@ -99,7 +99,7 @@ http://localhost:9000/
     "street": "Rua Doutor Messuti",
     "state": "SP",
     "number": "339",
-    "cep": "60000000"
+    "postal_code": "60000000"
   }
 }
 ```

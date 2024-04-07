@@ -7,12 +7,12 @@ const enterpriseSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["RELEASE", "IN_PROGRESS", "CANCELLED"],
+    enum: ["SOON_RELEASE", "RELEASE", "IN_PROGRESS", "READY"],
     required: true,
   },
   purpose: {
     type: String,
-    enum: ["HOME", "COMMERCIAL", "OTHER"],
+    enum: ["HOME", "COMMERCIAL"],
     required: true,
   },
   ri_number: {
@@ -40,7 +40,7 @@ const enterpriseSchema = new mongoose.Schema({
       type: Number,
       required: true,
     },
-    cep: {
+    postal_code: {
       type: String,
       required: true,
     },
